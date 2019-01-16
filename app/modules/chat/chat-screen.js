@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import { Colors } from '../../shared/themes'
 import WebsocketService from '../../shared/websockets/websocket.service'
-import { getLogin } from '../login/account.reducer'
+import { getLogin } from '../../shared/reducers/account.reducer'
 import ChatActions from '../chat/chat.reducer'
 import styles from './chat-screen.styles'
 
