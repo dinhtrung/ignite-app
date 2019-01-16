@@ -2,7 +2,7 @@ import { call, put, select } from 'redux-saga/effects'
 
 import LoginActions from './login.reducer'
 import AccountActions from '../../shared/reducers/account.reducer'
-import WebsocketService from '../../shared/websockets/websocket-service'
+import WebsocketService from '../../shared/websockets/websocket.service'
 
 export const selectAuthToken = (state) => state.login.authToken
 // attempts to login

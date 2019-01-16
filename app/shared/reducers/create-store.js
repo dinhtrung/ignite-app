@@ -4,7 +4,7 @@ import createSagaMiddleware from 'redux-saga'
 import RehydrationServices from '../services/rehydration.service'
 import ReduxPersist from '../../config/redux-persist'
 import Config from '../../config/debug-config'
-import WebsocketService from '../websockets/websocket-service'
+import WebsocketService from '../websockets/websocket.service'
 // creates the store
 export default (rootReducer, rootSaga) => {
   /* ------------- Redux Configuration ------------- */
