@@ -2,6 +2,30 @@ export default {
   // Functions return fixtures
 
   // entity fixtures
+
+  updatePartner: (partner) => {
+    return {
+      ok: true,
+      data: require('../../shared/fixtures/updatePartner.json')
+    }
+  },
+  getPartners: () => {
+    return {
+      ok: true,
+      data: require('../../shared/fixtures/getPartners.json')
+    }
+  },
+  getPartner: (partnerId) => {
+    return {
+      ok: true,
+      data: require('../../shared/fixtures/getPartner.json')
+    }
+  },
+  deletePartner: (partnerId) => {
+    return {
+      ok: true
+    }
+  },
   // ignite-jhipster-api-fixture-needle
 
   // user fixtures

@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 /*eslint-disable */
 import RoundedButton from '../../shared/components/rounded-button/rounded-button'
 import {
+  partnerEntityScreen,
   // ignite-jhipster-entity-screen-import-needle
 } from '../../navigation/layouts'
 /*eslint-enable */
@@ -16,6 +17,7 @@ class EntitiesScreen extends React.Component {
     return (
       <ScrollView style={styles.container}>
         <Text style={{ textAlign: 'center' }}>JHipster Entities will appear below</Text>
+        <RoundedButton text='Partner' onPress={partnerEntityScreen} testID='partnerEntityScreenButton' />
         {/* ignite-jhipster-entity-screen-needle */}
       </ScrollView>
     )

@@ -17,6 +17,9 @@ import RegisterScreen from '../modules/account/register/register-screen'
 import ForgotPasswordScreen from '../modules/account/password-reset/forgot-password-screen'
 import ChangePasswordScreen from '../modules/account/password/change-password-screen'
 import EntitiesScreen from '../modules/entities/entities-screen'
+import PartnerEntityScreen from '../modules/entities/partner/partner-entity-screen'
+import PartnerEntityDetailScreen from '../modules/entities/partner/partner-entity-detail-screen'
+import PartnerEntityEditScreen from '../modules/entities/partner/partner-entity-edit-screen'
 // ignite-jhipster-navigation-import-needle
 
 export const LOGIN_SCREEN = 'nav.LoginScreen'
@@ -27,6 +30,9 @@ export const SETTINGS_SCREEN = 'nav.SettingsScreen'
 export const LAUNCH_SCREEN = 'nav.LaunchScreen'
 export const DRAWER_CONTENT = 'nav.DrawerContent'
 export const ENTITIES_SCREEN = 'nav.EntitiesScreen'
+export const PARTNER_ENTITY_SCREEN = 'Nav.PartnerEntityScreen'
+export const PARTNER_ENTITY_DETAIL_SCREEN = 'Nav.PartnerEntityDetailScreen'
+export const PARTNER_ENTITY_EDIT_SCREEN = 'Nav.PartnerEntityEditScreen'
 // ignite-jhipster-navigation-declaration-needle
 
 const store = createStore()
@@ -110,6 +116,9 @@ export function registerScreensAndStartApp () {
   Navigation.registerComponentWithRedux(DRAWER_CONTENT, () => DrawerContent, Provider, store)
   Navigation.registerComponentWithRedux(LAUNCH_SCREEN, () => LaunchScreen, Provider, store)
   Navigation.registerComponentWithRedux(ENTITIES_SCREEN, () => EntitiesScreen, Provider, store)
+  Navigation.registerComponentWithRedux(PARTNER_ENTITY_SCREEN, () => PartnerEntityScreen, Provider, store)
+  Navigation.registerComponentWithRedux(PARTNER_ENTITY_DETAIL_SCREEN, () => PartnerEntityDetailScreen, Provider, store)
+  Navigation.registerComponentWithRedux(PARTNER_ENTITY_EDIT_SCREEN, () => PartnerEntityEditScreen, Provider, store)
   // ignite-jhipster-navigation-registration-needle
 
   Navigation.events().registerAppLaunchedListener(() => {
@@ -223,6 +232,61 @@ export const entitiesScreen = () => Navigation.push('center', {
       topBar: {
         title: {
           text: 'Entities',
+          color: Colors.snow
+        }
+      }
+    }
+  }
+})
+
+export const partnerEntityScreen = () => Navigation.push('center', {
+  component: {
+    name: PARTNER_ENTITY_SCREEN,
+    options: {
+      topBar: {
+        title: {
+          text: 'Partners',
+          color: Colors.snow
+        },
+        rightButtons: [
+          {
+            id: 'createButton',
+            text: 'Create',
+            color: Colors.snow
+          }
+        ]
+      }
+    }
+  }
+})
+
+export const partnerEntityEditScreen = (data) => Navigation.push('center', {
+  component: {
+    name: PARTNER_ENTITY_EDIT_SCREEN,
+    passProps: {
+      data
+    },
+    options: {
+      topBar: {
+        title: {
+          text: 'Partners',
+          color: Colors.snow
+        }
+      }
+    }
+  }
+})
+
+export const partnerEntityDetailScreen = (data) => Navigation.push('center', {
+  component: {
+    name: PARTNER_ENTITY_DETAIL_SCREEN,
+    passProps: {
+      data
+    },
+    options: {
+      topBar: {
+        title: {
+          text: 'Partners',
           color: Colors.snow
         }
       }

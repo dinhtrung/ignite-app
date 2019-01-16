@@ -12,6 +12,7 @@ import { RegisterTypes } from '../../modules/account/register/register.reducer'
 import { ForgotPasswordTypes } from '../../modules/account/password-reset/forgot-password.reducer'
 import { ChangePasswordTypes } from '../../modules/account/password/change-password.reducer'
 import { UserTypes } from '../../shared/reducers/user.reducer'
+import { PartnerTypes } from '../../modules/entities/partner/partner.reducer'
 // ignite-jhipster-saga-redux-import-needle
 
 /* ------------- Sagas ------------- */
@@ -23,6 +24,7 @@ import { forgotPassword } from '../../modules/account/password-reset/forgot-pass
 import { changePassword } from '../../modules/account/password/change-password.sagas'
 import { getAccount, updateAccount } from '../../shared/sagas/account.sagas'
 import { getUser, getUsers, updateUser, deleteUser } from '../../shared/sagas/user.sagas'
+import { getPartner, getPartners, updatePartner, deletePartner } from '../../modules/entities/partner/partner.sagas'
 // ignite-jhipster-saga-method-import-needle
 
 /* ------------- API ------------- */
@@ -45,6 +47,11 @@ export default function * root () {
     takeLatest(RegisterTypes.REGISTER_REQUEST, register, api),
     takeLatest(ForgotPasswordTypes.FORGOT_PASSWORD_REQUEST, forgotPassword, api),
     takeLatest(ChangePasswordTypes.CHANGE_PASSWORD_REQUEST, changePassword, api),
+
+    takeLatest(PartnerTypes.PARTNER_REQUEST, getPartner, api),
+    takeLatest(PartnerTypes.PARTNER_ALL_REQUEST, getPartners, api),
+    takeLatest(PartnerTypes.PARTNER_UPDATE_REQUEST, updatePartner, api),
+    takeLatest(PartnerTypes.PARTNER_DELETE_REQUEST, deletePartner, api),
     // ignite-jhipster-saga-redux-connect-needle
 
     takeLatest(UserTypes.USER_REQUEST, getUser, api),

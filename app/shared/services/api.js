@@ -51,6 +51,12 @@ const create = (baseURL = AppConfig.apiUrl) => {
   const createUser = (user) => api.post('api/users', user)
   const updateUser = (user) => api.put('api/users', user)
   const deleteUser = (userId) => api.delete('api/users/' + userId)
+
+  const getPartner = (partnerId) => api.get('api/partners/' + partnerId)
+  const getPartners = (options) => api.get('api/partners', options)
+  const createPartner = (partner) => api.post('api/partners', partner)
+  const updatePartner = (partner) => api.put('api/partners', partner)
+  const deletePartner = (partnerId) => api.delete('api/partners/' + partnerId)
   // ignite-jhipster-api-method-needle
 
   // ------
@@ -72,6 +78,12 @@ const create = (baseURL = AppConfig.apiUrl) => {
     getUsers,
     getUser,
     deleteUser,
+
+    createPartner,
+    updatePartner,
+    getPartners,
+    getPartner,
+    deletePartner,
     // ignite-jhipster-api-export-needle
     setAuthToken,
     removeAuthToken,
