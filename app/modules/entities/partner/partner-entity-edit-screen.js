@@ -73,6 +73,10 @@ class PartnerEntityEditScreen extends React.Component {
             testID: 'vcardInput'
           },
           createdAt: {
+            mode: 'date',
+            config: {
+              format: date => jsDateToLocalDate(date)
+            },
             returnKeyType: 'next',
             onSubmitEditing: () => this.refs.form.getComponent('registeredAt').refs.input.focus(),
             testID: 'createdAtInput'
