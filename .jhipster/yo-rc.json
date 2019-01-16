@@ -1,0 +1,37 @@
+{
+	"generator-jhipster": {
+		"applicationType": "monolith",
+		"gitCompany": "",
+		"baseName": "App",
+		"packageName": "com.ft",
+		"packageFolder": "com/ft",
+		"serverPort": 8080,
+		"serviceDiscoveryType": false,
+		"authenticationType": "jwt",
+		"uaaBaseName": "../uaa",
+		"cacheProvider": "hazelcast",
+		"enableHibernateCache": false,
+		"websocket": "spring-websocket",
+		"databaseType": "mongodb",
+		"devDatabaseType": "mongodb",
+		"prodDatabaseType": "mongodb",
+		"searchEngine": false,
+		"enableSwaggerCodegen": "true",
+		"messageBroker": false,
+		"buildTool": "maven",
+		"useSass": false,
+		"clientPackageManager": "npm",
+		"testFrameworks": [],
+		"enableTranslation": true,
+		"nativeLanguage": "en",
+		"languages": [
+			"vi",
+			"en"
+		],
+		"clientFramework": "angularX",
+		"jhiPrefix": "jhi",
+		"jhipsterVersion": "5.7.2",
+		"jwtSecretKey": "YTQ0YTMzNmJlODNkMzU5YTMyMGJhYWRhMjVlZjI0NjQ5NGJmYjkyMmZmZjVkYWE1NmEyMTA5NzAzNmZhMzdjOTI4MDY1NmZjMzQxMTZiZWE3NWM0ZTA4YWU4ODY1YjE3ZDE0N2VlMzg5MTExMmRmODE0MGJlYmViODYwZDBiNGM=",
+		"otherModules": []
+	}
+}
